@@ -1,0 +1,131 @@
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+}
+
+body {
+  background-color: var(--cream);
+  font-family: "Montserrat", sans-serif;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card-container {
+  display: flex;
+  max-width: 600px;
+  max-height: 450px;
+  border-radius: 5px;
+  max-height: inherit;
+}
+
+.product-img,
+.description {
+  flex: 1 1;
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px 0 0 5px;
+}
+
+.description {
+  box-sizing: border-box;
+  background-color: white;
+  padding: 15px 25px 25px 25px;
+  border-radius: 5px;
+}
+
+.product-type {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--dark-grayish-blue);
+  letter-spacing: 3px;
+}
+
+.product-name {
+  font-family: "Fraunces", serif;
+  font-weight: 800;
+  padding-right: 40px;
+  line-height: 1;
+}
+
+.product-desc {
+  color: var(--dark-grayish-blue);
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.price {
+  margin: 25px auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.after-discount {
+  color: var(--dark-cyan);
+  font-size: 2rem;
+  font-family: "Fraunces", serif;
+}
+
+.before-discount {
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+  font-size: 0.75rem;
+}
+
+.add-to-cart {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  width: 100%;
+  padding: 15px 0;
+  background-color: var(--dark-cyan);
+  border-style: none;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.add-to-cart:hover {
+  background-color: hsl(157, 41%, 20%);
+  cursor: pointer;
+}
+
+.cart-icon {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 375px) {
+  .product-img {
+    flex: 1;
+  }
+  .description {
+    flex: 1;
+  }
+  .card-container {
+    flex-direction: column;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+  }
+  .product-name {
+    padding-right: 0px;
+  }
+  .product-img img {
+    content: url(images/image-product-mobile.jpg);
+    border-radius: 5px 5px 0 0;
+  }
+}
