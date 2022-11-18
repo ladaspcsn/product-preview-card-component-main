@@ -108,7 +108,7 @@ body {
   max-width: 100%;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 450px) {
   .product-img {
     flex: 1;
   }
